@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsSup" targetNamespace="http://www.tempuri.org/dsSup.xsd" xmlns:mstns="http://www.tempuri.org/dsSup.xsd" xmlns="http://www.tempuri.org/dsSup.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsSup" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Super">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PassCode" type="xs:string" />
+              <xs:element name="Valid" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SwUsers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Account_x0020_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="Designation" type="xs:string" minOccurs="0" />
+              <xs:element name="E-Mail" type="xs:string" minOccurs="0" />
+              <xs:element name="Father_x0027_s_x0020_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" type="xs:string" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="PassCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Passwd" type="xs:string" minOccurs="0" />
+              <xs:element name="User_x0020_Id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Super" />
+      <xs:field xpath="mstns:PassCode" />
+    </xs:unique>
+    <xs:unique name="SwUsers_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SwUsers" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
